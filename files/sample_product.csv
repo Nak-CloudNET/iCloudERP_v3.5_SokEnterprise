@@ -1,0 +1,45 @@
+﻿Code,Name,Name KH,Category Code,Unit ID,Cost,Price,Alert Quantity, Tax Rate Name,Tax Method,Subcategory Code,Product Variants Separated by |,Supplier1(No),Supplier2(No),Supplier3(No),Supplier4(No),Supplier5(No),Custom Field 1,Custom Field 2,Custom Field 3,Custom Field 4,Custom Field 5,Custom Field 6,Image,Type(standard or service)
+CBRW001,Cube Roll Whole,សាច់ចំឡកមុខអត់ឆ្អឹងទាំងមូល,G001,1,15,17.7,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+BCRS002,Rib Eye Bone In/ Scotch Fillet,សាច់ចំឡកមុខមានឆ្អឹងជាបន្ទះ,G001,1,15,17.7,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+BCRS003,Rib Eye Boneless/ Scotch Fillet,សាច់ចំឡកមុខអត់ឆ្អឹងជាបន្ទះ,G001,1,15,17.7,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+LONW001,Sirlion Whole,សាច់ចំឡកក្រោយទាំងមូល,G001,1,15,17.7,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+LONW002,Striplion Whole,សាច់ចំឡកក្រោយអត់ឆ្អឹងទាំងមូល,G001,1,15,17.7,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+LONS003,T-Bone,សាច់ចំឡកក្រោយមានឆ្អឹងជាបន្ទះ,G001,1,16,18.88,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+LONS001,Tenderlion Whole,សាច់ចំឡកក្នុងទាំងមូល,G001,1,18,21.24,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF016,Tenderloin 2,ចំឡកបាយឆា,G001,1,6,7.08,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+CHK001,Chuck Whole,សាច់ស្មាទាំងមូល,G002,1,7.89,9.31,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+CHK002,Chuck Steak,សាច់ស្មាជាបន្ទះ,G002,1,7.89,9.31,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+BLDW001,Blade Whole,សាច់ស្មាទាំាំងមូលជាប់ខ្លាញ់,G002,1,7.89,9.31,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+SHNW001,Boneless/Gravy,សាច់កំភួន,G003,1,6.15,7.26,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+RIBS001,Short Ribs,ឆ្អឹងជំនីជាប់សាច់,G004,1,5,5.9,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+RIBS002,Korean BBQ Ribs,ឆ្អឹឹងជំនីជាប់សាច់ជាបន្ទះ,G004,1,5,5.9,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF018,Finger Rib,ចំន្លោះឆ្អឹងជំនី,G004,1,6,7.08,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+RUMW001,Rump Whole,សាច់ត្រគាកទាំងមូល,G005,1,8.5,10.03,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+RUMW002,Rump Steak,សាច់ត្រគាកជាបន្ទះ,G005,1,8.5,10.03,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+RUMB001,Rump Box,សាច់ត្រគាកទាំងមូល,G005,1,8,9.44,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+RONW001,Topside Whole,សាច់ភ្លៅទាំងមូល,G006,1,7.65,9.027,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+RONS001,Topside Steak,សាច់ភ្លៅជាបន្ទះ,G006,1,7.65,9.027,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+RONB001,Topside Box,សាច់ភ្លៅទាំងមូល,G006,1,7.8,9.204,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+RONS007,Knuckle Whole,សាច់ភ្លៅដុំមូូល,G006,1,8.5,10.03,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+BRKW001,Point End Whole,សាច់ឆ្ងកមុខទាំងមូល,G007,1,5.89,6.9502,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+BRKW002,Naval End Whole,សាច់ឆ្្ងកក្រោយទាំងមូល,G007,1,5.89,6.9502,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+BRKW003,Flank Steak,សាច់ពោះ,G007,1,5.29,6.2422,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+BRKB004,Flank Box,សាច់ពោះ,G007,1,5.5,6.49,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+BRKW004,Thin Flank,សាច់បាកណាម,G007,1,5.29,6.2422,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF001,Tongue,អណ្ដាត,G008,1,7,8.26,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF002,Tail,កន្ទុយ,G008,1,5,5.9,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF003,Tendon,សរសៃស្រួយ,G008,1,7,8.26,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF004,Leg,ជើង,G008,1,2,2.36,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF005,Cheek,សាច់ថ្ពាល់,G008,1,1.25,1.475,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF006,White Offal,គ្រឿងក្នុងសរ,G008,1,2.5,2.95,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF007,Bone Marrow,ខួរឆ្អឹង,G008,1,1,1.18,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF008,Bone,ឆ្អឹងខ្មង,G008,1,1,1.18,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF012,Red Offal,គ្រឿងក្នុងក្រហម,G008,1,3,3.54,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF013,Mouth,ក្រអូមមាត់,G008,1,1,1.18,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF014,Heart/Liver,បេះដូង/ក្រលៀន,G008,1,2.5,2.95,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF015,Penis,លិង្គ,G008,1,2.5,2.95,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF017,Knee Tendon,សរសៃជង្គង់,G008,1,5,5.9,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF019,Brain,ខួរ​,G008,1,3,3.54,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF009,Mince,សាច់កិន,G009,1,4.35,5.13,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF010,Triming 2,សាច់ចង្កាក់,G009,1,3.5,4.13,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
+OFF011,Triming 3,សាច់ម្ជូរគ្រឿង,G009,1,2,2.36,0, No Tax, exclusive,,,,,,,,,,,,,,no_image.png,standard
