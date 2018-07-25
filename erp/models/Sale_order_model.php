@@ -174,7 +174,7 @@ class Sale_order_model extends CI_Model
 		return null;
 	}
 	public function getCompanyByID($id){
-		$this->db->select("erp_companies.*");
+		$this->db->select("erp_companies.*,erp_companies.address_kh");
 		$this->db->join("erp_companies","erp_companies.id = erp_sale_order.customer_id","left");
 		$this->db->where('erp_sale_order.id', $id);
 		$q = $this->db->get('erp_sale_order');

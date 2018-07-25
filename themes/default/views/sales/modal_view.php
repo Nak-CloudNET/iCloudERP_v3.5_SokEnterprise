@@ -23,7 +23,7 @@
                 <i class="fa fa-2x">&times;</i>
             </button>
             <button type="button" class="btn btn-xs btn-default no-print pull-right" style="margin-right:15px;" onclick="window.print();">
-                <i class="fa fa-print"></i> <?= lang('print'); ?>
+                <i class="fa fa-print"></i><?= lang('print'); ?>
             </button>
 			<!--<div class="text-center">
 				<h1><?=lang('invoice')?></h1>
@@ -314,7 +314,7 @@
 					<?php if ($inv->deposit != 0) {?>
 					<tr>
                         <td></td>
-                        <td colspan="<?= $col; ?>"
+                        <td colspan="<?= $col   ; ?>"
                             style="text-align:right; font-weight:bold;"><?= lang("deposit"); ?>
                             (<?= $default_currency->code; ?>)
                         </td>
@@ -419,6 +419,12 @@
                             <a href="<?= site_url('sales/print_/' . $inv->id) ?>" target="_blank" class="tip btn btn-primary" title="<?= lang('print') ?>">
                                 <i class="fa fa-print"></i>
                                 <span class="hidden-sm hidden-xs"><?= lang('print') ?></span>
+                            </a>
+                        </div>
+                        <div class="btn-group">
+                            <a href="<?= site_url('sales/invoice_p/' . $inv->id) ?>" target="_blank" class="tip btn btn-primary" title="<?= lang('print invoice') ?>">
+                                <i class="fa fa-print"></i>
+                                <span class="hidden-sm hidden-xs"><?= lang('print_invoice') ?></span>
                             </a>
                         </div>
 						<!--

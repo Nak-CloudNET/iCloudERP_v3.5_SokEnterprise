@@ -1,4 +1,4 @@
-<?php 
+<?php
 	//$this->erp->print_arrays($rows);
 ?>
 <!DOCTYPE html>
@@ -174,6 +174,7 @@
                     </thead>
                     <tbody style="font-size: 13px;">
                     <?php $r = 1;
+
                     foreach ($rows as $row):
                         ?>
                         <tr>
@@ -260,7 +261,7 @@
                         echo '<tr><td colspan="' . $col . '" style="text-align:right;">' . lang("order_tax") . ' (' . $default_currency->code . ')</td><td style="text-align:right;">' . $this->erp->formatMoney($inv->order_tax) . '</td></tr>';
                     }
                     ?>
-                   
+
                     <tr>
                         <td colspan="<?= $col; ?>"
                             style="text-align:right; font-weight:bold;"><?= lang("total_amount"); ?>
@@ -331,7 +332,7 @@
             <a  target="_blank" class="btn btn-primary" href="<?= site_url('sales/tax_invoice2/'. $sid); ?>"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;<?= lang("tax_invoice_2"); ?></a>
 
 			<a  target="_blank" class="btn btn-primary" href="<?= site_url('sales/tax_invoice3/'. $sid); ?>"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;<?= lang("tax_invoice_ck"); ?></a>
-		
+
             <a  target="_blank" class="btn btn-primary" href="<?= site_url('sales/print_rks/' . $sid); ?>">
                 <i class="fa fa-print" aria-hidden="true"></i>&nbsp;<?= lang("rks_invoice"); ?>
             </a>
@@ -351,9 +352,10 @@
     </div>
 </div>
 <div id="mydiv" style="display:none;">
-	
+
 <div id="wrap" style="width: 90%; margin: 0 auto;">
     <div class="row">
+
         <div class="col-lg-12">
             <?php if ($logo) { ?>
                 <div class="text-center" style="margin-bottom:20px; text-align: center;">
@@ -562,7 +564,7 @@
                         echo '<tr><td colspan="' . $col . '" style="text-align:right;">' . lang("order_tax") . ' (' . $default_currency->code . ')</td><td style="text-align:right;">' . $this->erp->formatMoney($inv->order_tax) . '</td></tr>';
                     }
                     ?>
-                   
+
                     <tr>
                         <td colspan="<?= $col; ?>"
                             style="text-align:right; font-weight:bold;"><?= lang("total_amount"); ?>
@@ -616,7 +618,7 @@
     </div>
 </div>
 </div>
-<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.min.js" > </script> 
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.min.js" > </script>
 <script type="text/javascript">
 //	window.print();
 	window.PrintElem();
@@ -626,7 +628,7 @@
         Popup($(elem).html());
     }
 
-    function Popup(data) 
+    function Popup(data)
     {
         var mywindow = window.open('', 'mydiv', 'height=400,width=600');
   //      mywindow.document.write('<html><head><title>my div</title>');
