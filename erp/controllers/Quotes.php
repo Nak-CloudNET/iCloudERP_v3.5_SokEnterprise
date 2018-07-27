@@ -2490,5 +2490,32 @@ class Quotes extends MY_Controller
         $this->data['rows'] = $this->quotes_model->getQuoteItemsData($id);
         $this->load->view($this->theme .'quotes/invoice_quote_eang_tay_a5',$this->data);
     }
+    function quote_invoice_en($id=null)
+    {
+        $inv = $this->quotes_model->getQuotesData($id);
+        $this->data['setting'] = $this->site->get_setting();
+        $this->data['customer'] = $this->site->getCompanyByID($inv->customer_id);
+        $this->data['biller'] = $this->site->getCompanyByID($inv->biller_id);
+        $this->data['user'] = $this->site->getUser($inv->created_by);
+        $this->data['saleman'] = $this->site->getUser($inv->created_by);
+        $this->data['warehouse'] = $this->site->getWarehouseByID($inv->warehouse_id);
+        $this->data['invs'] = $inv;
+        $this->data['rows'] = $this->quotes_model->getQuoteItemsData($id);
+        $this->load->view($this->theme .'quotes/qoute_en',$this->data);
+    }
+    function quote_invoice_kh($id=null)
+    {
+        $inv = $this->quotes_model->getQuotesData($id);
+        $this->data['setting'] = $this->site->get_setting();
+        $this->data['customer'] = $this->site->getCompanyByID($inv->customer_id);
+        $this->data['biller'] = $this->site->getCompanyByID($inv->biller_id);
+        $this->data['user'] = $this->site->getUser($inv->created_by);
+        $this->data['saleman'] = $this->site->getUser($inv->created_by);
+        $this->data['warehouse'] = $this->site->getWarehouseByID($inv->warehouse_id);
+        $this->data['invs'] = $inv;
+        $this->data['rows'] = $this->quotes_model->getQuoteItemsData($id);
+        $this->load->view($this->theme .'quotes/qoute_kh',$this->data);
+    }
+
 
 }

@@ -34,8 +34,13 @@
         }
 
         .cus-tbody tr td{
-            padding: 2px 0px;
+            padding: 4px 0px;
             font-size: 12px ;
+        }
+        body{
+            font-size: 12px;
+            font-family: "Khmer OS System";
+            -moz-font-family: "Khmer OS System";
         }
     </style>
 </head>
@@ -45,7 +50,8 @@
 
             <div class="row">
                 <div class="col text-center">
-                    <h3 style="margin-bottom: -5px"><b><?= $biller->company_kh ?></b></h3>
+                    <h3 style="margin-bottom: -5px;  font-family:'Khmer OS Muol Light';
+                    -moz-font-family: 'Khmer OS System';"><b><?= $biller->company_kh ?></b></h3>
 
                     <h4 class=""><b><?= $biller->company != '-' ? $biller->company : $biller->name; ?></b></h4>
 
@@ -64,32 +70,42 @@
                                 <p>លេខអត្តសញ្ញាណកម្ម អតប (VATTIN)</p>
 
                             </td>
-                            <td>
-                                <p>: </p>
-                            </td>
+
                         </tr>
                         <tr>
                             <td>&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;
                             </td>
-                            <td><p>អាស័យដ្ឋាន </p></td>
-                            <td><p>: <?= $biller->address_kh; ?></p></td>
+                            <td><p>អាស័យដ្ឋាន : <?= $biller->address_kh; ?> </p></td>
+
                         </tr>
                         <tr>
                             <td></td>
-                            <td><p>Address </p></td>
-                            <td><p>: <?= $biller->address . " ," . $biller->city . " " . $biller->postal_code . " " . $biller->state . " " . $biller->country; ?></p></td>
+                            <td><p>Address : <?= $biller->address . " ," . $biller->city . " " . $biller->postal_code . " " . $biller->state . " " . $biller->country; ?></p></td>
+
                         </tr>
                         <tr>
                             <td></td>
-                            <td> <p>លេខទូរស័ព្ទ​ </p></td>
-                            <td><p>: </p></td>
+                            <td> <p>ទូរស័ព្ទលេខ​ : </p></td>
+
                         </tr>
                         <tr>
                             <td></td>
-                            <td><p>Telephone No</p></td>
-                            <td><p>: <?= $biller->phone; ?></p></td>
+                            <td>
+                                <p>
+                                    <?php
+                                        if($biller->phone){
+                                            echo 'Telephone No : '.$biller->phone;
+                                        }
+                                    if($biller->email){
+                                        echo ' Email : '.$biller->email;
+                                    }
+                                    ?>
+
+                                </p>
+                            </td>
+
                         </tr>
                     </table>
                 </div>
@@ -102,9 +118,10 @@
 
             <div class="row">
                 <div class="col text-center">
-                    <h3 style="padding-bottom: 3px;">វិក្កយប័ត្រ</h3>
+                    <h3 style="padding-bottom: 3px;font-family:'Khmer OS Muol Light';
+                    -moz-font-family: 'Khmer OS System';">វិក្កយប័ត្រ</h3>
 
-                    <h5>INVOICE</h5>
+                    <h5 style="font-weight: bold">INVOICE</h5>
                 </div>
             </div>
             <br>
@@ -139,20 +156,21 @@
                             <td>
                                 <table style="font-weight: bold; "  width="100%">
                                     <tr>
-                                        <td><p>លេខរៀងវិក័យប័ត្រ ៖&nbsp;</p></td>
+                                        <td><p>លេខរៀងវិក័យប័ត្រ / Invoice N<sup>o</sup>&nbsp;: </p></td>
                                         <td><p>&nbsp; <?= $inv->reference_no ?></p></td>
                                     </tr>
                                     <tr>
-                                        <td><p>Invoice N <sup>o</sup> </p></td>
-                                        <td><p>&nbsp; <?= $inv->reference_no ?></p></td>
+                                        <td><p>កាលបរិច្ឆេត / Date :</p></td>
+                                        <td><p>&nbsp; <?= date("d-m-Y", strtotime($inv->date)); ?></p></td>
                                     </tr>
                                     <tr>
-                                        <td><p>កាលបរិច្ឆេត :</p></td>
-                                        <td><p>&nbsp; 09/12/2018</p></td>
+                                        <td><p> </p></td>
+                                        <td><p>&nbsp; </p></td>
                                     </tr>
+
                                     <tr>
-                                        <td><p>Date :</p></td>
-                                        <td><p>&nbsp; 09/12/2018</p></td>
+                                        <td><p></p></td>
+                                        <td><p>&nbsp; </p></td>
                                     </tr>
                                     <tr>
                                         <td>&nbsp;</td>
@@ -163,11 +181,6 @@
                             </td>
                         </tr>
                     </table>
-                    <br>
-
-
-
-
                 </div>
 
 
@@ -315,24 +328,24 @@
                         }
                         if($inv->order_tax>0){
                         ?>
-                       <tr>
+                      <!-- <tr>
                             <td colspan="<?= $col; ?>" class="text-right" style="padding-top: 5px; font-weight: 800" ><p>ពន្ធអាករ&nbsp;/ Order Tax&nbsp;</p></td>
                             <td ><?= $this->erp->formatMoney($inv->order_tax); ?></td>
-                        </tr>
+                        </tr>-->
                         <?php }
                             if($inv->order_discount>0){
                         ?>
                         <tr>
 
-                            <td colspan="<?= $col; ?>" class="text-right" style="padding-top: 5px; font-weight: 800" ><p>បញ្ចុះតម្លៃ&nbsp;/ Order Discount&nbsp;</p></td>
+                            <td colspan="<?= $col; ?>" class="text-right" style="padding-top: 5px; font-weight: 800" ><p>បញ្ចុះតម្លៃ&nbsp;<br> Order Discount&nbsp;</p></td>
                             <td ><?= $this->erp->formatMoney($inv->order_discount); ?></td>
 
                         </tr>
                         <?php } ?>
                             <tr>
 
-                                <td colspan="<?= $col; ?>" class="text-right" style="padding-top: 5px; font-weight: 800" ><p>សរុប&nbsp;/ Grand Total&nbsp;</p></td>
-                                <td ><?= $this->erp->formatMoney( ($g_total+$inv->order_tax)-$inv->order_discount); ?></td>
+                                <td colspan="<?= $col; ?>" class="text-right" style="padding-top: 5px; font-weight: 800" ><p>សរុប(បូកបញ្ចូលទាំអាករ)&nbsp;<br>Total(VAT included)&nbsp;</p></td>
+                                <td ><?= $this->erp->formatMoney( $g_total-$inv->order_discount); ?></td>
 
                             </tr>
                         </tbody>

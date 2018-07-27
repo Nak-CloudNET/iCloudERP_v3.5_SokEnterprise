@@ -308,10 +308,17 @@
                             </a>
                         </div>-->
                         <div class="btn-group">
-                            <a href="<?= site_url('Quotes/quote_invoice_thai_san/' . $inv->id) ?>" target="_blank"
-                               class="tip btn btn-primary" title="<?= lang('print_quote') ?>">
+                            <a href="<?= site_url('Quotes/quote_invoice_kh/' . $inv->id) ?>" target="_blank"
+                               class="tip btn btn-primary" title="<?= lang('Quote_KH') ?>">
                                 <i class="fa fa-heart"></i>
-                                <span class="hidden-sm hidden-xs"><?= lang('Print_Quote') ?></span>
+                                <span class="hidden-sm hidden-xs"><?= lang('Print_Quote_KH') ?></span>
+                            </a>
+                        </div>
+                        <div class="btn-group">
+                            <a href="<?= site_url('Quotes/quote_invoice_en/' . $inv->id) ?>" target="_blank"
+                               class="tip btn btn-primary" title="<?= lang('Quote EN') ?>">
+                                <i class="fa fa-heart"></i>
+                                <span class="hidden-sm hidden-xs"><?= lang('Print_Quote_EN') ?></span>
                             </a>
                         </div>
                         <!--<div class="btn-group">
