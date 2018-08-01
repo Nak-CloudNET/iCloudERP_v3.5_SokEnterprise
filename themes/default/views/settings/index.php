@@ -333,9 +333,10 @@ $ps = array('0' => lang("disable"), '1' => lang("enable"));
                                         $wh[""] = "";
 										foreach ($warehouses as $warehouse) {
                                             $wh[$warehouse->id] = $warehouse->name . ' (' . $warehouse->code . ')';
+
                                         }
-                                        //$this->erp->print_arrays($wh);
-                                        echo form_dropdown('warehouse', $wh, $Settings->default_warehouse, 'class="form-control tip" id="warehouse" required="required" style="width:100%;"');
+                                        //$this->erp->print_arrays($wh[$warehouse->id]);
+                                        echo form_dropdown('warehouse',$wh[$warehouse->id], $Settings->warehouse,'class="form-control tip" required="required" id="restrict_calendar" style="width:100%;"');
 										?>
 									</div>
 								</div>
