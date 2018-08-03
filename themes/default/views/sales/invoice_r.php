@@ -50,8 +50,8 @@
 
             <div class="row">
                 <div class="col text-center">
-                    <h3 style="margin-bottom: -5px;  font-family:'Khmer OS Muol Light';
-                    -moz-font-family: 'Khmer OS System';"><b><?= $biller->company_kh ?></b></h3>
+                    <h4 style="margin-bottom: -5px;  font-family:'Khmer OS Muol Light';
+                    -moz-font-family: 'Khmer OS System';"><?= $biller->company_kh ?></h4>
 
                     <h4 class=""><b><?= $biller->company != '-' ? $biller->company : $biller->name; ?></b></h4>
 
@@ -77,34 +77,50 @@
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;
                             </td>
-                            <td><p>អាស័យដ្ឋាន : <?= $biller->address_kh; ?> </p></td>
+                            <td><p>អាស័យដ្ឋាន : <?= $biller->cf4; ?> </p></td>
 
                         </tr>
                         <tr>
                             <td></td>
-                            <td><p>Address : <?= $biller->address . " ," . $biller->city . " " . $biller->postal_code . " " . $biller->state . " " . $biller->country; ?></p></td>
+                            <td><p>Address : <?= $biller->address; ?></p></td>
 
                         </tr>
                         <tr>
                             <td></td>
-                            <td> <p>ទូរស័ព្ទលេខ​ : </p></td>
+                            <td> </td>
 
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <p>
-                                    <?php
-                                        if($biller->phone){
-                                            echo 'Telephone No : '.$biller->phone;
-                                        }
-                                    if($biller->email){
-                                        echo ' Email : '.$biller->email;
-                                    }
-                                    ?>
+                                <table >
+                                    <tr>
+                                        <td><p>ទូរស័ព្ទលេខ: </p></td>
+                                        <td rowspan="2">
+                                            <p >
+                                                <?php
+                                                if($biller->phone){
+                                                    echo '<span> &nbsp;&nbsp; '.$biller->phone.'</span>';
+                                                }
+                                                if($biller->email){
+                                                    echo ' Email : '.$biller->email;
+                                                }
+                                                ?>
 
-                                </p>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><p><?php
+                                                if($biller->phone){
+                                                    echo 'Telephone No:' ;
+                                                }
+                                                ?>
+                                            </p></td>
+                                    </tr>
+                                </table>
                             </td>
+
 
                         </tr>
                     </table>
@@ -118,8 +134,8 @@
 
             <div class="row">
                 <div class="col text-center">
-                    <h3 style="padding-bottom: 3px;font-family:'Khmer OS Muol Light';
-                    -moz-font-family: 'Khmer OS System';">វិក្កយប័ត្រ</h3>
+                    <h4 style="padding-bottom: 3px;font-family:'Khmer OS Muol Light';
+                    -moz-font-family: 'Khmer OS System';">វិក្កយប័ត្រ</h4>
 
                     <h5 style="font-weight: bold">INVOICE</h5>
                 </div>
@@ -230,7 +246,7 @@
                             ?>
                             <tr>
                                 <td ><?= $r; ?></td>
-                                <td ><?= $row->product_name . " (" . $row->product_code . ")" . ($row->variant ? ' (' . $row->variant . ')' : ''); ?>
+                                <td class="text-left">&nbsp;&nbsp;<?= $row->product_name . " (" . $row->product_code . ")" . ($row->variant ? ' (' . $row->variant . ')' : ''); ?>
                                     <?= $row->details ? '<br>' . $row->details : ''; ?>
                                     <?= $row->product_noted ? '<br>' . $row->product_noted : ''; ?>
                                 </td>
