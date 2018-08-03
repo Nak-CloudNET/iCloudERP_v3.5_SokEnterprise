@@ -58,14 +58,15 @@
                         <?php echo form_input('code', $customer->code, 'class="form-control tip" id="code"  data-bv-notempty="true"'); ?>
                     </div>
 					<?php } ?>
+                    <div class="form-group company">
+                        <?= lang("company", "company"); ?>
+                        <?php echo form_input('company', $customer->company, 'class="form-control tip" id="company" '); ?>
+                    </div>
                     <div class="form-group person">
                         <?= lang("name", "name"); ?>
                         <?php echo form_input('name', $customer->name, 'class="form-control tip" id="name" required="required"'); ?>
                     </div>
-					<div class="form-group person">
-                        <?= lang("name_kh", "name_kh"); ?>
-                        <?php echo form_input('name_kh', $customer->name_kh, 'class="form-control tip" id="name_kh"'); ?>
-                    </div>					
+
                     <div class="form-group">
                         <?= lang("vat_no", "vat_no"); ?>
                         <?php echo form_input('vat_no', $customer->vat_no, 'class="form-control" id="vat_no"'); ?>
@@ -88,8 +89,8 @@
                         <?= lang("address", "address"); ?> 
                         <?php echo form_input('address', $customer->address, 'class="form-control" id="address" data-bv-notempty="true"'); ?>
                     </div>
-					
-						<div class="form-group">
+
+                    <!--<div class="form-group">
 							<?= lang("address1", "address1"); ?> 
 							<?php echo form_input('address1', $customer->address_1, 'class="form-control" id="address1" '); ?>
 						</div>
@@ -119,7 +120,7 @@
                         <?php echo form_input('credit_limit', $customer->credit_limited, 'class="form-control" id="credit_limit"'); ?>
                     </div>
 					<?php } ?>
-					<!--
+
                     <div class="form-group">
                         <?= lang("address2", "address2"); ?>
                         <?php echo form_input('address2', $customer->address2, 'class="form-control" id="address2""'); ?>
@@ -152,9 +153,17 @@
                         <?= lang("postal_code", "postal_code"); ?>
                         <?php echo form_input('postal_code', $customer->postal_code, 'class="form-control" id="postal_code"'); ?>
                     </div> -->
-                    <div class="form-group company">
-                        <?= lang("company", "company"); ?>
-                        <?php echo form_input('company', $customer->company, 'class="form-control tip" id="company"'); ?>
+                    <div class="form-group">
+                        <?= lang("ក្រុមហ៊ុន", "company_kh"); ?>
+                        <?php echo form_input('company_kh', $customer->company_kh, 'class="form-control" id="company_kh"'); ?>
+                    </div>
+                    <div class="form-group">
+                        <?= lang("ឈ្មោះ", "name_kh"); ?>
+                        <?php echo form_input('name_kh', $customer->name_kh, 'class="form-control" id="name_kh"'); ?>
+                    </div>
+                    <div class="form-group">
+                        <?= lang("អាស័យដ្ឋាន", "address_kh"); ?>
+                        <?php echo form_input('address_kh', $customer->address_kh, 'class="form-control" id="address_kh"'); ?>
                     </div>					
 					<div class="form-group">
                         <?= lang("Marital Status", "status"); ?>
@@ -222,7 +231,7 @@
 						echo form_dropdown('payment_term', $pt_group, $customer->payment_term_id, 'class="form-control tip select" id="payment_term" style="width:100%;" placeholder="' . lang("select") . ' ' . lang("payment_term") . '" ');
 						?>
 					</div>
-					-->
+
                     <div class="form-group">
                         <?= lang("street_no", "street_no"); ?>
                         <?php echo form_input('street', $customer->street,'class="form-control" id="street"'); ?>
@@ -246,7 +255,7 @@
 					<div class="form-group">
                         <?= lang("state", "state"); ?>
                         <?php echo form_input('state', $customer->state, 'class="form-control" id="state"'); ?>
-                    </div>
+                    </div>-->
                     <div class="form-group">
                         <?= lang("postal_code", "postal_code"); ?>
                         <?php echo form_input('postal_code', $customer->postal_code, 'class="form-control" id="postal_code"'); ?>
@@ -271,11 +280,14 @@
 						echo form_dropdown('sale_area', $sa_group, $customer->sales_area_id, 'class="form-control tip select" id="sale_area" style="width:100%;" placeholder="' . lang("select") . ' ' . lang("group_area") . '" ');
 						?>
 					</div> -->
-					<div class="form-group">
+
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
                         <?= lang("note", "note"); ?>
-                        <?php echo form_textarea('note', $customer->invoice_footer, 'class="form-control skip" id="note" style="height:115px;"'); ?>
+                        <?php echo form_textarea('note', '', 'class="form-control skip" id="note" style="height:115px;"'); ?>
                     </div>
-                </div> 
+                </div>
             </div>
             
 

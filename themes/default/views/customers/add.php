@@ -73,14 +73,15 @@
                         <?php echo form_input('code', $reference ? $reference : "",'class="form-control input-tip" id="code" data-bv-notempty="true"'); ?>
                     </div>
 					<?php } ?>
+                    <div class="form-group company">
+                        <?= lang("company", "company"); ?>
+                        <?php echo form_input('company', '', 'class="form-control tip" id="company" '); ?>
+                    </div>
                     <div class="form-group person">
                         <?= lang("name", "name"); ?>
                         <?php echo form_input('name', '', 'class="form-control tip" id="name" data-bv-notempty="true"'); ?>
                     </div>
-					<div class="form-group person">
-                        <?= lang("name_kh", "name_kh"); ?>
-                        <?php echo form_input('name_kh', '', 'class="form-control tip" id="name_kh"'); ?>
-                    </div>
+
                     <div class="form-group">
                         <?= lang("vat_no", "vat_no"); ?>
                         <?php echo form_input('vat_no', '', 'class="form-control" id="vat_no"'); ?>
@@ -96,7 +97,7 @@
                     </div>
                     <div class="form-group">
                         <?= lang("phone", "phone"); ?>
-						<?php echo form_input('phone', '', 'class="form-control" id="phone" type="tel" data-bv-notempty="true" '); ?>
+						<?php echo form_input('phone', '', 'class="form-control" id="phone" type="tel" '); ?>
                     </div>
                     <div class="form-group">
                         <?= lang("address", "address"); ?> <span style="float:right;"><button class="btn btn-sm btn-primary add_more">Add More</button></span>
@@ -124,7 +125,7 @@
 							<?php echo form_input('address5', '', 'class="form-control" id="address5" '); ?>
 						</div>
 					</div>
-					<div class="form-group">
+					<!--<div class="form-group">
                         <?= lang("village", "village"); ?>
                         <?php echo form_input('village', '', 'class="form-control" id="village"'); ?>
                     </div>
@@ -139,7 +140,7 @@
                     <div class="form-group">
                         <?= lang("country", "country"); ?>
                         <?php echo form_input('country', '', 'class="form-control" id="country"'); ?>
-                    </div>
+                    </div>-->
 					<?php if($setting->credit_limit == 1) {?>
 					 <div class="form-group">
                         <?= lang("credit_limit", "credit_limit"); ?>
@@ -163,10 +164,19 @@
                         <?= lang("postal_code", "postal_code"); ?>
                         <?php echo form_input('postal_code', '', 'class="form-control" id="postal_code"'); ?>
                     </div> -->
-                    <div class="form-group company">
-                        <?= lang("company", "company"); ?>
-                        <?php echo form_input('company', '', 'class="form-control tip" id="company" '); ?>
+                    <div class="form-group">
+                        <?= lang("&#6016;&#6098;&#6042;&#6075;&#6040;&#6048;&#6090;&#6075;&#6035;", "company_kh"); ?>
+                        <?php echo form_input('company_kh', '', 'class="form-control" id="company_kh"'); ?>
                     </div>
+                    <div class="form-group">
+                        <?= lang("&#6024;&#6098;&#6040;&#6084;&#6087;", "name_kh"); ?>
+                        <?php echo form_input('name_kh', '', 'class="form-control" id="name_kh"'); ?>
+                    </div>
+                    <div class="form-group">
+                        <?= lang("&#6050;&#6070;&#6047;&#6096;&#6041;&#6026;&#6098;&#6027;&#6070;&#6035;", "address_kh"); ?>
+                        <?php echo form_input('address_kh', '', 'class="form-control" id="address_kh"'); ?>
+                    </div>
+
 					<div class="form-group">
                         <?= lang("marital_status", "status"); ?>
                         <?php
@@ -214,7 +224,7 @@
                         <?= lang("end_date", "cf5"); ?> <?= lang("Ex: YYYY-MM-DD"); ?>
                         <?php echo form_input('end_date', isset($customer->end_date)?date('d-m-Y', strtotime($customer->end_date)):'', 'class="form-control date" id="datepicker end_date"'); ?>
                     </div>
-					-->
+
 					<div class="form-group">
                         <?= lang("street_no", "street_no"); ?>
                         <?php echo form_input('street', '', 'class="form-control" id="street"'); ?>
@@ -226,12 +236,15 @@
                     <div class="form-group">
                         <?= lang("city", "city"); ?>
                         <?php echo form_input('city', '', 'class="form-control" id="city"'); ?>
-                    </div>
+                    </div>-->
                     <div class="form-group">
                         <?= lang("postal_code", "postal_code"); ?>
                         <?php echo form_input('postal_code', isset($customer->postal_code)?$customer->postal_code:'', 'class="form-control" id="postal_code"'); ?>
 					</div>
-					<div class="form-group">
+
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
                         <?= lang("note", "note"); ?>
                         <?php echo form_textarea('note', '', 'class="form-control skip" id="note" style="height:115px;"'); ?>
                     </div>
