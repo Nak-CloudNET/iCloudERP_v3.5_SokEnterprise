@@ -148,7 +148,19 @@
                             </tr>
                             <tr>
                                 <td><p>ឈ្មោះក្រុមហ៊ុន / អតិថិជន :&nbsp;</p></td>
-                                <td><p> &nbsp;<?= $customer->company_kh; ?></p></td>
+                                <td><p> &nbsp;<?php
+                                        if($customer->company&&$customer->name_kh){
+                                            echo $customer->company;
+                                        }else{
+                                            if($customer->company){
+                                                echo $customer->company;
+                                            }
+                                            else{
+                                                echo $customer->name_kh;
+                                            }
+                                        }
+                                        ?></p>
+                                </td>
                             </tr>
                             <tr>
                                 <td><p>Company name : </p> </td>
