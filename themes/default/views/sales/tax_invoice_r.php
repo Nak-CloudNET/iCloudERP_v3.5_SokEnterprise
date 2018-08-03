@@ -77,34 +77,45 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;
                     </td>
-                    <td><p>អាស័យដ្ឋាន : <?= $biller->address_kh; ?> </p></td>
-
+                    <td><p>អាស័យដ្ឋាន : <?= $biller->cf4; ?> </p></td>
+<!--                    --><?php //$this->erp->print_arrays($biller); ?>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><p>Address : <?= $biller->address . " ," . $biller->city . " " . $biller->postal_code . " " . $biller->state . " " . $biller->country; ?></p></td>
-
-                </tr>
-                <tr>
-                    <td></td>
-                    <td> <p>ទូរស័ព្ទលេខ​ </p></td>
+                    <td><p>Address : <?= $biller->address; ?></p></td>
 
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <p>
-                            <?php
-                            if($biller->phone){
-                                echo 'Telephone No : '.$biller->phone;
-                            }
-                            if($biller->email){
-                                echo ' Email : '.$biller->email;
-                            }
-                            ?>
+                        <table >
+                            <tr>
+                                <td><p>ទូរស័ព្ទលេខ: </p></td>
+                                <td rowspan="2">
+                                    <p >
+                                        <?php
+                                        if($biller->phone){
+                                            echo '<span> &nbsp;&nbsp; '.$biller->phone.'</span>';
+                                        }
+                                        if($biller->email){
+                                            echo ' Email : '.$biller->email;
+                                        }
+                                        ?>
 
-                        </p>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><p><?php
+                                        if($biller->phone){
+                                            echo 'Telephone No:' ;
+                                        }
+                                        ?>
+                                    </p></td>
+                            </tr>
+                        </table>
                     </td>
+
 
                 </tr>
             </table>
