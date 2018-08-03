@@ -230,7 +230,7 @@
                             ?>
                             <tr>
                                 <td ><?= $r; ?></td>
-                                <td ><?= $row->product_name . " (" . $row->product_code . ")" . ($row->variant ? ' (' . $row->variant . ')' : ''); ?>
+                                <td class="text-left">&nbsp;&nbsp;<?= $row->product_name . " (" . $row->product_code . ")" . ($row->variant ? ' (' . $row->variant . ')' : ''); ?>
                                     <?= $row->details ? '<br>' . $row->details : ''; ?>
                                     <?= $row->product_noted ? '<br>' . $row->product_noted : ''; ?>
                                 </td>
