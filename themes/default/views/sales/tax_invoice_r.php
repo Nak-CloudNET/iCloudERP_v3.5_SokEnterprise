@@ -50,8 +50,8 @@
 
     <div class="row">
         <div class="col text-center">
-            <h3 style="margin-bottom: -5px;  font-family:'Khmer OS Muol Light';
-                    -moz-font-family: 'Khmer OS System';"><b><?= $biller->company_kh ?></b></h3>
+            <h4 style="margin-bottom: -5px;  font-family:'Khmer OS Muol Light';
+                    -moz-font-family: 'Khmer OS System';"><?= $biller->company_kh ?></h4>
 
             <h4 class=""><b><?= $biller->company != '-' ? $biller->company : $biller->name; ?></b></h4>
 
@@ -129,8 +129,8 @@
 
     <div class="row">
         <div class="col text-center">
-            <h3 style="padding-bottom: 3px;font-family:'Khmer OS Muol Light';
-                    -moz-font-family: 'Khmer OS System';">វិក្កយប័ត្រអាករ</h3>
+            <h4 style="padding-bottom: 3px;font-family:'Khmer OS Muol Light';
+                    -moz-font-family: 'Khmer OS System'; ">វិក្កយប័ត្រអាករ</h4>
 
             <h5 style="font-weight: bold">TAX ​INVOICE</h5>
         </div>
